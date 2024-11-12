@@ -30,9 +30,11 @@
 <div id="questionAnswerWrapper">
     <p id="questionPtag">Question:</p>
     <input type="text" id="answerInputBox" />
-    <button id="submitBtn">Submit</button>
+    <button id="submitBtn" onclick="checkAnswer()">Submit</button>
+    <img src="" id="showImgCorrectNotcorrect" width="50px"/>
 </div>
 
+<button id="resetButtonID" onclick="resetFunc()" >Reset</button>
 </body>
 <script src="index.js"></script>
 </html>

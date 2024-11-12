@@ -10,3 +10,6 @@
 #questionAnswerWrapper{
     display: none;  
 }
+#resetButtonID{
+    display: none;
+}
