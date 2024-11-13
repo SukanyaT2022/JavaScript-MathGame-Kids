@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/asset/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- “Arithmetic Learning Game - C Level” -->
+
+<p>Welcome to the game!</p>
+
+<button id="startBtn" onclick="startShowBtnFunc()">Start</button>
+
+<div id="addSubtractWrapper">
+<p>Choose one of the options.</p>
+<button id="additionBtn" onclick="plusFunc()">+</button>
+<button id="subtractBtn" onclick="minusFunc()">-</button>
+</div>
+
+
+<div id="easyHardWrapper">
+   <h3>Level</h3> 
+<input type="radio" name="radio" value="easy" id="easyRadio" onclick="easyFunc()"/><p>Easy</p>
+<input type="radio" name="radio" value="medium" id="mediumRadio" onclick="mediumFunc()" /><p>Medium</p>
+<input type="radio" name="radio" value="hard" id="hardRadio" onclick="hardFunc()" /><p>Hard</p>
+</div>
+
+<div id="questionAnswerWrapper">
+    <p id="questionPtag">Question:</p>
+    <input type="text" id="answerInputBox" />
+    <button id="submitBtn" onclick="checkAnswer()">Submit</button>
+    <img src="" id="showImgCorrectNotcorrect" width="50px"/>
+</div>
+
+<button id="resetButtonID" onclick="resetFunc()" >Reset</button>
+</body>
+<script src="index.js"></script>
+</html>
