@@ -13,3 +13,6 @@
 #resetButtonID{
     display: none;
 }
+#nextBtn{
+    visibility: hidden;
+}
