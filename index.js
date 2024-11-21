@@ -8,8 +8,14 @@ var questionNum = 0;
 function startShowBtnFunc() {
   document.getElementById("addSubtractWrapper").style.display = "block";
   questionNum = questionNum + 1;
+  // if the question number reach question 10 set question to no 1 and score to 0
+  if(questionNum == 11){
+      questionNum = 1
+      score = 0
+  }
   document.getElementById("questionNumID").innerText =
     "Question No." + questionNum;
+
 }
 
 function plusFunc() {
@@ -85,6 +91,11 @@ document.getElementById('nextBtn').style.visibility = "visible";
   if (ans == answer) {
     document.getElementById("showImgCorrectNotcorrect").src =
       "/asset/image/correct2.png";
+      score = score + 1
+      console.log(score)
+      document.getElementById("holdScoreID").innerText =
+      "Score " + score;
+
   } else {
     document.getElementById("showImgCorrectNotcorrect").src =
       "/asset/image/notcorrect.png";
@@ -107,11 +118,27 @@ function resetFunc() {
 }
 function nextQuestionFunc() {
   questionNum = questionNum + 1;
+  if(questionNum == 11){
+    questionNum = 1
+    if (score >= 8){
+      alert('Very good job!')
+    }else if(score == 7){
+      alert('Good Job!')
+    }else{
+      alert('Try Again!')
+    }
+    score = 0
+    resetFunc()
+    document.getElementById("holdScoreID").innerText =
+    "Score " + score;
+}
   document.getElementById("questionNumID").innerText =
     "Question No." + questionNum;
     generateQuestion()
     document.getElementById('nextBtn').style.visibility = "hidden";
     document.getElementById("showImgCorrectNotcorrect").src =
       "";
+
+      
 
 }
