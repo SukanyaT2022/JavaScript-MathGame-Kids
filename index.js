@@ -9,13 +9,14 @@ function startShowBtnFunc() {
   document.getElementById("addSubtractWrapper").style.display = "block";
   questionNum = questionNum + 1;
   // if the question number reach question 10 set question to no 1 and score to 0
-  if(questionNum == 11){
-      questionNum = 1
-      score = 0
+  if (questionNum == 11) {
+    questionNum = 1;
+    score = 0;
   }
   document.getElementById("questionNumID").innerText =
     "Question No." + questionNum;
-
+  document.getElementById("rocketID").style.visibility = "hidden";
+  document.getElementById("rockStarTextID").style.visibility = "hidden";
 }
 
 function plusFunc() {
@@ -74,33 +75,31 @@ function generateQuestion() {
 // submit button
 function checkAnswer() {
   // read id or answer from user
-  var answer = (document.getElementById("answerInputBox").value);
-  if (answer == ""){
-    alert('Please enter the answer!')
-  }else{
-    answer = parseInt(answer)
-  var ans = 0;
-  document.getElementById("answerInputBox").value = " ";
-  // answer from formula
-  if (storePlusorMinus == "+") {
-    ans = num1 + num2;
-  } else if (storePlusorMinus == "-") {
-    ans = num1 - num2;
-  }
-document.getElementById('nextBtn').style.visibility = "visible";
-  if (ans == answer) {
-    document.getElementById("showImgCorrectNotcorrect").src =
-      "/asset/image/correct2.png";
-      score = score + 1
-      console.log(score)
-      document.getElementById("holdScoreID").innerText =
-      "Score " + score;
-
+  var answer = document.getElementById("answerInputBox").value;
+  if (answer == "") {
+    alert("Please enter the answer!");
   } else {
-    document.getElementById("showImgCorrectNotcorrect").src =
-      "/asset/image/notcorrect.png";
+    answer = parseInt(answer);
+    var ans = 0;
+    document.getElementById("answerInputBox").value = " ";
+    // answer from formula
+    if (storePlusorMinus == "+") {
+      ans = num1 + num2;
+    } else if (storePlusorMinus == "-") {
+      ans = num1 - num2;
+    }
+    document.getElementById("nextBtn").style.visibility = "visible";
+    if (ans == answer) {
+      document.getElementById("showImgCorrectNotcorrect").src =
+        "/asset/image/correct2.png";
+      score = score + 1;
+      console.log(score);
+      document.getElementById("holdScoreID").innerText = "Score " + score;
+    } else {
+      document.getElementById("showImgCorrectNotcorrect").src =
+        "/asset/image/notcorrect.png";
+    }
   }
-}
 }
 
 function resetFunc() {
@@ -115,30 +114,47 @@ function resetFunc() {
   document.getElementById("answerInputBox").value = " ";
   document.getElementById("questionPtag").innerText = "";
   document.getElementById("showImgCorrectNotcorrect").src = "";
+  // document.getElementById('rocketID').style.visibility = "hidden"
 }
 function nextQuestionFunc() {
   questionNum = questionNum + 1;
-  if(questionNum == 11){
-    questionNum = 1
-    if (score >= 8){
-      alert('Very good job!')
-    }else if(score == 7){
-      alert('Good Job!')
-    }else{
-      alert('Try Again!')
+  if (questionNum == 11) {
+    questionNum = 1;
+    if (score >= 8) {
+      moveRocket();
+    } else if (score == 7) {
+    goodJob()
+    } else {
+      ghost()
     }
-    score = 0
-    resetFunc()
-    document.getElementById("holdScoreID").innerText =
-    "Score " + score;
-}
+    score = 0;
+    resetFunc();
+    document.getElementById("holdScoreID").innerText = "Score " + score;
+  }
   document.getElementById("questionNumID").innerText =
     "Question No." + questionNum;
-    generateQuestion()
-    document.getElementById('nextBtn').style.visibility = "hidden";
-    document.getElementById("showImgCorrectNotcorrect").src =
-      "";
+  generateQuestion();
+  document.getElementById("nextBtn").style.visibility = "hidden";
+  document.getElementById("showImgCorrectNotcorrect").src = "";
+}
+function moveRocket() {
+  document.getElementById("rocketID").src = "/asset/image/rocket.png";
+  document.getElementById("rockStarTextID").innerText = "You are a rock star!";
+  document.getElementById("rocketID").style.visibility = "visible";
+  document.getElementById("rockStarTextID").style.visibility = "visible";
 
-      
+}
+function goodJob() {
+  document.getElementById("rocketID").src = "/asset/image/goodjob.png";
+  document.getElementById("rockStarTextID").innerText = "Good Job!";
+  document.getElementById("rocketID").style.visibility = "visible";
+  document.getElementById("rockStarTextID").style.visibility = "visible";
+
+}
+function ghost() {
+  document.getElementById("rocketID").src = "/asset/image/ghost.png";
+  document.getElementById("rockStarTextID").innerText = "Keep trying!";
+  document.getElementById("rocketID").style.visibility = "visible";
+  document.getElementById("rockStarTextID").style.visibility = "visible";
 
 }
