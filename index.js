@@ -58,16 +58,32 @@ function generateQuestion() {
   if (storeEasyMediumHard == "easy") {
     // generate random number below bet 1 to 10
     num1 = Math.floor(Math.random() * 10) + 1;
-    num2 = Math.floor(Math.random() * 10) + 1;
+    if(storePlusorMinus == "-"){
+      num2 = Math.floor(Math.random()*(num1 - 1 + 1 )) + 1
+    }else{
+      num2 = Math.floor(Math.random() * 10) + 1;
+    }
+    
   } else if (storeEasyMediumHard == "medium") {
     // generate random number below bet 11 to 100
     num1 = Math.floor(Math.random() * (100 - 11 + 1)) + 11;
-    num2 = Math.floor(Math.random() * (100 - 11 + 1)) + 11;
+    
+    if(storePlusorMinus == "-"){
+      num2 = Math.floor(Math.random()*(num1 - 11 + 1 )) + 11;
+    }else{
+      num2 = Math.floor(Math.random() * (100 - 11 + 1)) + 11;
+    }
+
   } else {
     // generate random number below bet 111 to 1000
 
     num1 = Math.floor(Math.random() * (1000 - 111 + 1)) + 111;
-    num2 = Math.floor(Math.random() * (1000 - 111 + 1)) + 111;
+    if(storePlusorMinus == "-"){
+      num2 = Math.floor(Math.random()*(num1 - 111 + 1 )) + 111;
+    }else{
+      num2 = Math.floor(Math.random() * (1000 - 111 + 1)) + 111;
+    }
+  
   }
   document.getElementById("questionPtag").innerText =
     num1 + " " + storePlusorMinus + " " + num2;
