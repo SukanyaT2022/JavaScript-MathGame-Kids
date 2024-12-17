@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/asset/index.css">
+
     <title>Document</title>
 </head>
 <body>
     <!-- “Arithmetic Learning Game - C Level” -->
-
-
-<p>Play Free Math Games!</p>
-
+<div class="mainContainer">
+<div class="startSection">
+<p>Let's Play Fun Math Games!</p>
 <button id="startBtn" onclick="startShowBtnFunc()">Start</button>
+</div>
 
 <div id="addSubtractWrapper">
 <p>Choose one of the options.</p>
@@ -35,6 +36,7 @@
     <input type="text" id="answerInputBox" />
     <button id="submitBtn" onclick="checkAnswer()">Submit</button>
 </div>
+
     <button id="nextBtn" onclick="nextQuestionFunc()">Next Question</button>
 
     <img src="" id="showImgCorrectNotcorrect" width="50px"/>
@@ -49,6 +51,7 @@
 <img src="" width="300px" id="rocketID" style="visibility: hidden"/>
 <P id="rockStarTextID" style="visibility: hidden"></P>
 
+</div>
 
 </body>
 <script src="index.js" ></script>

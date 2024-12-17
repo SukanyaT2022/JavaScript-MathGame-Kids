@@ -7,6 +7,7 @@ var questionNum = 0;
 
 function startShowBtnFunc() {
   document.getElementById("addSubtractWrapper").style.display = "block";
+  document.getElementById("startBtn").style.display = "none";
   questionNum = questionNum + 1;
   // if the question number reach question 10 set question to no 1 and score to 0
   if (questionNum == 11) {
@@ -21,13 +22,18 @@ function startShowBtnFunc() {
 
 function plusFunc() {
   // when click easy medium hard section show
+  console.log('+')
   document.getElementById("easyHardWrapper").style.display = "block";
   storePlusorMinus = "+";
 }
 
 function minusFunc() {
   // when click easy medium hard section show
+  console.log('-')
   document.getElementById("easyHardWrapper").style.display = "block";
+  document.getElementById("addSubtractWrapper").style.display = "none";
+  document.getElementById("easyHardWrapper").style.zIndex = "2";
+  document.getElementById("addSubtractWrapper").style.zIndex = "1";
   storePlusorMinus = "-";
 }
 
@@ -119,6 +125,7 @@ function checkAnswer() {
 }
 
 function resetFunc() {
+  document.getElementById("startBtn").style.display = "block";
   document.getElementById("addSubtractWrapper").style.display = "none";
   document.getElementById("questionAnswerWrapper").style.display = "none";
   document.getElementById("easyHardWrapper").style.display = "none";

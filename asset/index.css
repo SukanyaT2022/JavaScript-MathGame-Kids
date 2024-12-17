@@ -1,18 +1,42 @@
-#startBtn{
-
-}
 #addSubtractWrapper{
-    display: none;
+display:none;
+position: absolute;
+left: 500px;
+top:100px;
+z-index: 1;
 }
 #easyHardWrapper{
-    display: none; 
+ display:none;  
+ position: absolute;
+left: 500px;
+top:100px;
+z-index: 1; 
 }
 #questionAnswerWrapper{
-    display: none;  
+ display:none; 
+ position: absolute;
+left: 500px;
+top:100px;
+z-index: 1;    
 }
 #resetButtonID{
-    display: none;
+ display:none;       
+}
+#holdScoreID{
+ display:none;      
 }
 #nextBtn{
-    visibility: hidden;
+ display:none;   
+}
+.startSection{
+ display: flex;
+ align-items: center;
+ flex-direction: column;
+ border: 2px solid pink;
+ height: 300px;
+ width: 50%;
+ position: absolute;
+ left:300px;
+ z-index: 5;
+ 
 }
