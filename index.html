@@ -10,8 +10,9 @@
 <body>
     <!-- “Arithmetic Learning Game - C Level” -->
 <div class="mainContainer">
+    <p>Let's Play Fun Math Games!</p>
 <div class="startSection">
-<p>Let's Play Fun Math Games!</p>
+
 <button id="startBtn" onclick="startShowBtnFunc()">Start</button>
 </div>
 
@@ -24,25 +25,39 @@
 
 <div id="easyHardWrapper">
    <h3>Level</h3> 
-<input type="radio" name="radio" value="easy" id="easyRadio" onclick="easyFunc()"/><p>Easy</p>
-<input type="radio" name="radio" value="medium" id="mediumRadio" onclick="mediumFunc()" /><p>Medium</p>
-<input type="radio" name="radio" value="hard" id="hardRadio" onclick="hardFunc()" /><p>Hard</p>
+   <div class="containerAllLevelInputP">
+   <div class="wrapLevelInputandP">
+    <input type="radio" name="radio" value="easy" id="easyRadio" onclick="easyFunc()"/><p>Easy</p>
+</div>
+
+   <div class="wrapLevelInputandP">
+    <input type="radio" name="radio" value="medium" id="mediumRadio" onclick="mediumFunc()" /><p>Medium</p>
+</div>
+
+<div class="wrapLevelInputandP">
+    <input type="radio" name="radio" value="hard" id="hardRadio" onclick="hardFunc()" /><p>Hard</p>
+</div>
+</div>
 </div>
 
 
 <div id="questionAnswerWrapper">
     <h2 id="questionNumID">Question No.</h2>
     <p id="questionPtag">Question:</p>
+  <div class="wrapInputSubmitBtnResetBtn">
     <input type="text" id="answerInputBox" />
     <button id="submitBtn" onclick="checkAnswer()">Submit</button>
-</div>
-
     <button id="nextBtn" onclick="nextQuestionFunc()">Next Question</button>
-
-    <img src="" id="showImgCorrectNotcorrect" width="50px"/>
+    
+</div>
 </div>
 
 <button id="resetButtonID" onclick="resetFunc()" >Reset</button>
+
+    <img src="" id="showImgCorrectNotcorrect" width="50px"/>
+
+
+
 <!-- below div show score -->
 
 
@@ -50,7 +65,6 @@
 
 <img src="" width="300px" id="rocketID" style="visibility: hidden"/>
 <P id="rockStarTextID" style="visibility: hidden"></P>
-
 </div>
 
 </body>

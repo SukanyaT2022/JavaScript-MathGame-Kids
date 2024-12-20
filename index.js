@@ -24,6 +24,7 @@ function plusFunc() {
   // when click easy medium hard section show
   console.log('+')
   document.getElementById("easyHardWrapper").style.display = "block";
+  document.getElementById("addSubtractWrapper").style.display = "none";
   storePlusorMinus = "+";
 }
 
@@ -32,14 +33,14 @@ function minusFunc() {
   console.log('-')
   document.getElementById("easyHardWrapper").style.display = "block";
   document.getElementById("addSubtractWrapper").style.display = "none";
-  document.getElementById("easyHardWrapper").style.zIndex = "2";
-  document.getElementById("addSubtractWrapper").style.zIndex = "1";
+  
   storePlusorMinus = "-";
 }
 
 function easyFunc() {
   // when click radio easy questionanswerwrapper open
   document.getElementById("questionAnswerWrapper").style.display = "block";
+  document.getElementById("easyHardWrapper").style.display = "none";
   storeEasyMediumHard = "easy"; //easy is value on html
   generateQuestion();
   document.getElementById("resetButtonID").style.display = "block";
@@ -48,6 +49,7 @@ function easyFunc() {
 function mediumFunc() {
   // when click radio easy questionanswerwrapper open
   document.getElementById("questionAnswerWrapper").style.display = "block";
+  document.getElementById("easyHardWrapper").style.display = "none";
   storeEasyMediumHard = "medium"; //meduim is value on html
   generateQuestion();
 }
@@ -55,6 +57,7 @@ function mediumFunc() {
 function hardFunc() {
   // when click radio easy questionanswerwrapper open
   document.getElementById("questionAnswerWrapper").style.display = "block";
+  document.getElementById("easyHardWrapper").style.display = "none";
   storeEasyMediumHard = "hard"; //hard is value on html
   generateQuestion();
 }
@@ -110,7 +113,7 @@ function checkAnswer() {
     } else if (storePlusorMinus == "-") {
       ans = num1 - num2;
     }
-    document.getElementById("nextBtn").style.visibility = "visible";
+    document.getElementById("nextBtn").style.display = "block";
     if (ans == answer) {
       document.getElementById("showImgCorrectNotcorrect").src =
         "/asset/image/correct2.png";
@@ -137,6 +140,7 @@ function resetFunc() {
   document.getElementById("answerInputBox").value = " ";
   document.getElementById("questionPtag").innerText = "";
   document.getElementById("showImgCorrectNotcorrect").src = "";
+  document.getElementById("nextBtn").style.display = "none";
   // document.getElementById('rocketID').style.visibility = "hidden"
 }
 function nextQuestionFunc() {
@@ -157,7 +161,7 @@ function nextQuestionFunc() {
   document.getElementById("questionNumID").innerText =
     "Question No." + questionNum;
   generateQuestion();
-  document.getElementById("nextBtn").style.visibility = "hidden";
+  document.getElementById("nextBtn").style.display = "none";
   document.getElementById("showImgCorrectNotcorrect").src = "";
 }
 function moveRocket() {
