@@ -52,6 +52,7 @@ function mediumFunc() {
   document.getElementById("easyHardWrapper").style.display = "none";
   storeEasyMediumHard = "medium"; //meduim is value on html
   generateQuestion();
+  document.getElementById("resetButtonID").style.display = "block";
 }
 
 function hardFunc() {
@@ -60,6 +61,7 @@ function hardFunc() {
   document.getElementById("easyHardWrapper").style.display = "none";
   storeEasyMediumHard = "hard"; //hard is value on html
   generateQuestion();
+  document.getElementById("resetButtonID").style.display = "block";
 }
 
 // this function generate random number after clikc - or minus and level
@@ -128,7 +130,8 @@ function checkAnswer() {
 }
 
 function resetFunc() {
-  document.getElementById("startBtn").style.display = "block";
+
+  document.getElementById("startBtn").style.display = "flex";
   document.getElementById("addSubtractWrapper").style.display = "none";
   document.getElementById("questionAnswerWrapper").style.display = "none";
   document.getElementById("easyHardWrapper").style.display = "none";
@@ -142,6 +145,9 @@ function resetFunc() {
   document.getElementById("showImgCorrectNotcorrect").src = "";
   document.getElementById("nextBtn").style.display = "none";
   // document.getElementById('rocketID').style.visibility = "hidden"
+  document.getElementById("easyRadio").checked = false;
+  document.getElementById("mediumRadio").checked = false;
+  document.getElementById("hardRadio").checked = false;
 }
 function nextQuestionFunc() {
   questionNum = questionNum + 1;
