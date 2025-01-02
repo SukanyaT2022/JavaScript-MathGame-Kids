@@ -15,7 +15,7 @@ function startShowBtnFunc() {
     score = 0;
   }
   document.getElementById("questionNumID").innerText =
-    "Question No." + questionNum;
+    "Question " + questionNum;
   document.getElementById("rocketID").style.visibility = "hidden";
   document.getElementById("rockStarTextID").style.visibility = "hidden";
 }
@@ -44,6 +44,7 @@ function easyFunc() {
   storeEasyMediumHard = "easy"; //easy is value on html
   generateQuestion();
   document.getElementById("resetButtonID").style.display = "block";
+  document.getElementById("holdScoreID").style.display = "block";
 }
 
 function mediumFunc() {
@@ -53,6 +54,7 @@ function mediumFunc() {
   storeEasyMediumHard = "medium"; //meduim is value on html
   generateQuestion();
   document.getElementById("resetButtonID").style.display = "block";
+  document.getElementById("holdScoreID").style.display = "block";
 }
 
 function hardFunc() {
@@ -62,6 +64,7 @@ function hardFunc() {
   storeEasyMediumHard = "hard"; //hard is value on html
   generateQuestion();
   document.getElementById("resetButtonID").style.display = "block";
+  document.getElementById("holdScoreID").style.display = "block";
 }
 
 // this function generate random number after clikc - or minus and level
@@ -130,8 +133,7 @@ function checkAnswer() {
 }
 
 function resetFunc() {
-
-  document.getElementById("startBtn").style.display = "flex";
+  document.getElementById("startBtn").style.display = "block";
   document.getElementById("addSubtractWrapper").style.display = "none";
   document.getElementById("questionAnswerWrapper").style.display = "none";
   document.getElementById("easyHardWrapper").style.display = "none";
@@ -148,6 +150,8 @@ function resetFunc() {
   document.getElementById("easyRadio").checked = false;
   document.getElementById("mediumRadio").checked = false;
   document.getElementById("hardRadio").checked = false;
+  document.getElementById("holdScoreID").style.display = "none";
+  score = 0
 }
 function nextQuestionFunc() {
   questionNum = questionNum + 1;
@@ -165,7 +169,7 @@ function nextQuestionFunc() {
     document.getElementById("holdScoreID").innerText = "Score " + score;
   }
   document.getElementById("questionNumID").innerText =
-    "Question No." + questionNum;
+    "Question " + questionNum;
   generateQuestion();
   document.getElementById("nextBtn").style.display = "none";
   document.getElementById("showImgCorrectNotcorrect").src = "";
