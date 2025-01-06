@@ -175,14 +175,14 @@ function nextQuestionFunc() {
   document.getElementById("showImgCorrectNotcorrect").src = "";
 }
 function moveRocket() {
-  document.getElementById("rocketID").src = "/asset/image/rocket.png";
+  document.getElementById("rocketID").src = "/asset/image/rocketIcon.svg";
   document.getElementById("rockStarTextID").innerText = "You are a rock star!";
   document.getElementById("rocketID").style.visibility = "visible";
   document.getElementById("rockStarTextID").style.visibility = "visible";
 
 }
 function goodJob() {
-  document.getElementById("rocketID").src = "/asset/image/goodjob.png";
+  document.getElementById("rocketID").src = "/asset/image/alien.png";
   document.getElementById("rockStarTextID").innerText = "Good Job!";
   document.getElementById("rocketID").style.visibility = "visible";
   document.getElementById("rockStarTextID").style.visibility = "visible";

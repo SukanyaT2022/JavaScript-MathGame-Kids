@@ -8,9 +8,15 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- “Arithmetic Learning Game - C Level” -->
+ 
+  <img src="/asset/image/rocket15.jpg"  class="rocketImg"/> 
+    
+  
+    <!-- <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzdxa3lzam1jMGV3OTRhdmp5anh2azd5a3BlMmVubThocWlpd2lidyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/i3ik0embqfh1TktXrW/giphy.webp" class="gipFlower"/> -->
+
+    
 <div class="mainContainer">
-    <p>Let's Play Fun Math Games!</p>
+    <h2>Let's Play Fun Math Games!</h2>
 <div class="startSection">
 
 <button id="startBtn" onclick="startShowBtnFunc()">Start</button>
@@ -24,7 +30,7 @@
 
 
 <div id="easyHardWrapper">
-   <h3>Level</h3> 
+   <h3>Choose Level</h3> 
    <div class="containerAllLevelInputP">
    <div class="wrapLevelInputandP">
     <input type="radio" name="radio" value="easy" id="easyRadio" onclick="easyFunc()"/><p>Easy</p>
@@ -46,13 +52,12 @@
     <p id="questionPtag">Question:</p>
 
   <div class="wrapInputSubmitBtn">
-
     <input type="text" id="answerInputBox" />
     <button id="submitBtn" onclick="checkAnswer()">Submit</button>
     <button id="nextBtn" onclick="nextQuestionFunc()">Next Question</button>
-    
+
 </div>
-<img src="" id="showImgCorrectNotcorrect" width="50px"/>
+
 </div>
 
 <button id="resetButtonID" onclick="resetFunc()" >Reset</button>
@@ -60,8 +65,11 @@
 
 <!-- below div show score -->
 
+<div class="wrapScoreCorrect">
+    <img src="" id="showImgCorrectNotcorrect" />
+    <h2 id="holdScoreID">Score: 0 </h2>
+</div>
 
-<h2 id="holdScoreID">Score: 0 </h2>
 
 <img src="" width="300px" id="rocketID" style="visibility: hidden"/>
 <P id="rockStarTextID" style="visibility: hidden"></P>
