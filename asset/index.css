@@ -4,12 +4,16 @@
   box-sizing: border-box;
   font-family: "Schoolbell", serif;
 }
-.rocketImg{
-  background-position: right top;
+body{
+  background-position: bottom right;
   width: 100%;
-  height: 900px;
+  height: 100vh;
   object-fit: cover;
+  overflow: hidden;
+  background-image: url('image/rocket15.jpg');
+  background-size: cover;
 }
+
 /* iframe{
  width: 100vw; 
  height: 100vh;
@@ -30,8 +34,8 @@
 }
 
 #addSubtractWrapper {
-
   display: none;
+ 
 }
 #easyHardWrapper {
   display: none;
@@ -45,7 +49,6 @@ padding-top: 20px;
   position: absolute; 
  left: 50%;
   top: 50%; 
-  margin-top: 50px;
   transform: translate(-50%,-50%);
   /* margin: 50px auto 0px auto; */
   width: 50%;
@@ -65,14 +68,22 @@ padding-top: 20px;
 top:100px; */
   /* z-index: 1;     */
 }
+#questionPtag{
+  font-size: 30px;
+}
+
 #resetButtonID {
   display: none;
   position: relative;
-  top: 180px;
+  top: 130px;
   left: 50%;
   transform: translateX(-50%);
   width: 40%;
   padding: 10px 20px;
+  background-color: #FC8810;
+  border: none;
+  font-weight: bolder;
+  font-size: 20px;
 }
 #holdScoreID {
   display: none;
@@ -131,7 +142,7 @@ margin-right: 10px;
 
 
 #submitBtn, #nextBtn{
-  background-color: #009935;
+  background-color: #FFBD1F;
   border: none;
   font-weight: bolder;
 }
@@ -146,17 +157,16 @@ margin-right: 10px;
   
 }
 
-#resetButtonID{
-  background-color: #FC8810;
-  border: none;
-  font-weight: bolder;
-  font-size: 20px;
-}
+
 .wrapInputSubmitBtn input, 
 .wrapInputSubmitBtn button{
 padding: 20px 15px;
 margin: 0px 5px;
-border: 2px solid  #009935;
+border: 2px solid  #FFBD1F;
+font-size: 20px;
+}
+#answerInputBox{
+  font-size: 20px;
 }
 
 /* #resetButtonID {
@@ -166,15 +176,52 @@ border: 2px solid  #009935;
 /* control image goodjob badjob  */
 #rocketID {
   margin-top: 50px;
+  width: 200px;
 }
+#rockStarTextID{
+  font-size: 30px;
+}
+
 .wrapScoreCorrect{
 display: flex;
 justify-content: center;
 align-items: center;
 width: 80%;
 margin: auto;
+margin-top: -30px;
 }
 #showImgCorrectNotcorrect{
 width: 70px;
 margin-right: 20px;
+}
+/* ipad pro */
+@media screen and (max-width: 1024px) {
+  body{
+    background-position: center ;   
+  }
+  .mainContainer {
+      width: 70%;
+  }
+}
+/* ipad air */
+@media screen and (max-width: 992px) {
+  .mainContainer {
+    width: 80%;
+    height: 650px;
+    padding-top: 20px;
+  }
+  .wrapScoreCorrect{
+    margin-top: -40px;
+    }
+    #resetButtonID {  
+      top: 140px;   
+    }
+}
+/* ipad mini */
+@media screen and (max-width: 768px) {
+ 
+}
+/* phone */
+@media screen and (max-width: 600px) {
+ 
 }
