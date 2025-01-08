@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Schoolbell&display=swap");
 
-*{
+* {
   box-sizing: border-box;
   font-family: "Schoolbell", serif;
 }
-body{
+body {
   background-position: bottom right;
   width: 100%;
   height: 100vh;
   object-fit: cover;
   overflow: hidden;
-  background-image: url('image/rocket15.jpg');
+  background-image: url("image/rocket15.jpg");
   background-size: cover;
 }
 
@@ -28,28 +28,24 @@ body{
 .startSection {
   width: 100%;
 }
-#startBtn {
-  width: 40%;
-  margin: auto;
-}
+
 
 #addSubtractWrapper {
   display: none;
- 
 }
 #easyHardWrapper {
   display: none;
-
 }
+/* choose level */
 #easyHardWrapper h3 {
-font-size: 30px;
-padding-top: 20px;
+  font-size: 30px;
+  padding-top: 20px;
 }
 .mainContainer {
-  position: absolute; 
- left: 50%;
-  top: 50%; 
-  transform: translate(-50%,-50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   /* margin: 50px auto 0px auto; */
   width: 50%;
   height: 600px;
@@ -57,18 +53,14 @@ padding-top: 20px;
   text-align: center;
   background-color: white;
 }
-.mainContainer h2{
+/* let play fin math game title */
+.mainContainer h2 {
   font-size: 35px;
 }
 #questionAnswerWrapper {
   display: none;
-
-  /* position: absolute; */
-  /* left: 500px;
-top:100px; */
-  /* z-index: 1;     */
 }
-#questionPtag{
+#questionPtag {
   font-size: 30px;
 }
 
@@ -80,7 +72,7 @@ top:100px; */
   transform: translateX(-50%);
   width: 40%;
   padding: 10px 20px;
-  background-color: #FC8810;
+  background-color: #fc8810;
   border: none;
   font-weight: bolder;
   font-size: 20px;
@@ -88,32 +80,23 @@ top:100px; */
 #holdScoreID {
   display: none;
 }
-#nextBtn {
-  display: none;
-}
+
 .startSection {
-  /* display: flex; */
   align-items: center;
   flex-direction: column;
   margin: auto;
-  /* border: 2px solid pink; */
-  /* height: 300px; */
   width: 50%;
-  /* position: absolute; */
-  /* left:300px; */
-  /* z-index: 5; */
 }
 .wrapLevelInputandP {
   display: flex;
   margin: 0px 30px;
 }
-.wrapLevelInputandP p{
+.wrapLevelInputandP p {
   font-size: 30px;
-
 }
-.wrapLevelInputandP input{
-width: 20px;
-margin-right: 10px;
+.wrapLevelInputandP input {
+  width: 20px;
+  margin-right: 10px;
 }
 
 .containerAllLevelInputP {
@@ -122,27 +105,35 @@ margin-right: 10px;
   flex-direction: row;
   justify-content: center;
 }
-#addSubtractWrapper{
+#addSubtractWrapper {
   font-size: 20px;
 }
-#startBtn{
-  background-color: #F3A93D;
+#startBtn {
+  margin: auto;
+  background-color: #f3a93d;
   border: none;
-  font-weight: bolder;
-  padding: 10px 20px;
+  font-weight: bold;
+  padding: 10px 60px;
   font-size: 20px;
 }
-#additionBtn, #subtractBtn{
-  background-color: #F3A93D;
+#additionBtn,
+#subtractBtn {
+  background-color: #f3a93d;
   border: none;
   font-weight: bolder;
   padding: 10px 20px;
   font-size: 25px;
 }
 
+#submitBtn{ 
+    background-color: #ffbd1f;
+    border: none;
+    font-weight: bolder;  
+}
 
-#submitBtn, #nextBtn{
-  background-color: #FFBD1F;
+#nextBtn {
+  display: none;
+  background-color: #5dade2 ;
   border: none;
   font-weight: bolder;
 }
@@ -153,19 +144,17 @@ margin-right: 10px;
   display: flex;
   justify-content: center;
   padding: 10px;
- margin: auto;
-  
+  margin: auto;
 }
 
-
-.wrapInputSubmitBtn input, 
-.wrapInputSubmitBtn button{
-padding: 20px 15px;
-margin: 0px 5px;
-border: 2px solid  #FFBD1F;
-font-size: 20px;
+.wrapInputSubmitBtn input,
+.wrapInputSubmitBtn button {
+  padding: 20px 15px;
+  margin: 0px 5px;
+  border: 2px solid #ffbd1f;
+  font-size: 20px;
 }
-#answerInputBox{
+#answerInputBox {
   font-size: 20px;
 }
 
@@ -175,32 +164,32 @@ font-size: 20px;
 } */
 /* control image goodjob badjob  */
 #rocketID {
-  margin-top: 50px;
+  margin-top: 80px;
   width: 200px;
 }
-#rockStarTextID{
+#rockStarTextID {
   font-size: 30px;
 }
 
-.wrapScoreCorrect{
-display: flex;
-justify-content: center;
-align-items: center;
-width: 80%;
-margin: auto;
-margin-top: -30px;
+.wrapScoreCorrect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  margin-top: -30px;
 }
-#showImgCorrectNotcorrect{
-width: 70px;
-margin-right: 20px;
+#showImgCorrectNotcorrect {
+  width: 70px;
+  margin-right: 20px;
 }
 /* ipad pro */
 @media screen and (max-width: 1024px) {
-  body{
-    background-position: center ;   
+  body {
+    background-position: center;
   }
   .mainContainer {
-      width: 70%;
+    width: 70%;
   }
 }
 /* ipad air */
@@ -210,18 +199,56 @@ margin-right: 20px;
     height: 650px;
     padding-top: 20px;
   }
-  .wrapScoreCorrect{
+  .wrapScoreCorrect {
     margin-top: -40px;
-    }
-    #resetButtonID {  
-      top: 140px;   
-    }
+  }
+  #resetButtonID {
+    top: 140px;
+  }
 }
 /* ipad mini */
 @media screen and (max-width: 768px) {
- 
 }
 /* phone */
 @media screen and (max-width: 600px) {
- 
+  /* let play fin math game title */
+  .mainContainer{
+  height: 70vh;
+
+  }
+  .mainContainer h2 {
+    font-size: 20px;
+
+  }
+  /* choose level */
+  #easyHardWrapper h3 {
+    font-size: 25px;
+    padding-top: 10px;
+  }
+
+.wrapLevelInputandP {
+  margin: 0px 10px;
+}
+.wrapLevelInputandP p {
+  font-size: 20px;
+}
+.wrapInputSubmitBtn {
+  flex-direction: column;
+  margin-top: -20px;
+}
+.wrapInputSubmitBtn button{
+margin-top: 10px;
+padding: 10px 0px;
+}
+#questionPtag {
+  font-size: 25px;
+}
+#resetButtonID {
+  top: 90px;
+}
+/* round check correct or not correct */
+#showImgCorrectNotcorrect {
+  width: 60px;
+
+}
 }
