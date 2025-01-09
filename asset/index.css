@@ -29,7 +29,6 @@ body {
   width: 100%;
 }
 
-
 #addSubtractWrapper {
   display: none;
 }
@@ -125,15 +124,15 @@ body {
   font-size: 25px;
 }
 
-#submitBtn{ 
-    background-color: #ffbd1f;
-    border: none;
-    font-weight: bolder;  
+#submitBtn {
+  background-color: #ffbd1f;
+  border: none;
+  font-weight: bolder;
 }
 
 #nextBtn {
   display: none;
-  background-color: #5dade2 ;
+  background-color: #5dade2;
   border: none;
   font-weight: bolder;
 }
@@ -212,43 +211,47 @@ body {
 /* phone */
 @media screen and (max-width: 600px) {
   /* let play fin math game title */
-  .mainContainer{
-  height: 70vh;
-
+  .mainContainer {
+    height: 70vh;
   }
   .mainContainer h2 {
     font-size: 20px;
-
   }
   /* choose level */
   #easyHardWrapper h3 {
     font-size: 25px;
     padding-top: 10px;
   }
-
-.wrapLevelInputandP {
-  margin: 0px 10px;
-}
-.wrapLevelInputandP p {
-  font-size: 20px;
-}
-.wrapInputSubmitBtn {
-  flex-direction: column;
-  margin-top: -20px;
-}
-.wrapInputSubmitBtn button{
-margin-top: 10px;
-padding: 10px 0px;
-}
-#questionPtag {
-  font-size: 25px;
-}
-#resetButtonID {
-  top: 90px;
-}
-/* round check correct or not correct */
-#showImgCorrectNotcorrect {
-  width: 60px;
-
-}
+  #easyHardWrapper {
+    display: none;
+    padding-right: 5px;
+  }
+  .wrapLevelInputandP {
+    margin: 0px 10px;
+  }
+  .wrapLevelInputandP p {
+    font-size: 20px;
+  }
+  .wrapInputSubmitBtn {
+    flex-direction: column;
+    margin-top: -20px;
+  }
+  .wrapInputSubmitBtn button {
+    margin-top: 10px;
+    padding: 10px 0px;
+  }
+  #questionPtag {
+    font-size: 25px;
+  }
+  #resetButtonID {
+    top: 90px;
+  }
+  /* round check correct or not correct */
+  #showImgCorrectNotcorrect {
+    width: 60px;
+  }
+  /* good job try again */
+  #rocketID {
+    margin-top: 120px;
+  }
 }
