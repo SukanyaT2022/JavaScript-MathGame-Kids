@@ -6,6 +6,7 @@ var score = 0;
 var questionNum = 0;
 
 function startShowBtnFunc() {
+  console.log('here is start function')
   document.getElementById("addSubtractWrapper").style.display = "block";
   document.getElementById("startBtn").style.display = "none";
   questionNum = questionNum + 1;
@@ -19,6 +20,7 @@ function startShowBtnFunc() {
   document.getElementById("rocketID").style.visibility = "hidden";
   document.getElementById("rockStarTextID").style.visibility = "hidden";
 }
+
 
 function plusFunc() {
   // when click easy medium hard section show
