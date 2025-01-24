@@ -163,8 +163,7 @@ body {
 } */
 /* control image goodjob badjob  */
 #rocketID {
-  margin-top: 80px;
-  width: 200px;
+  width: 150px;
 }
 #rockStarTextID {
   font-size: 30px;
@@ -181,6 +180,20 @@ body {
 #showImgCorrectNotcorrect {
   width: 70px;
   margin-right: 20px;
+}
+/* result rocket good job  */
+.wrapImgMessageResult{
+  position: absolute;
+  top: 20px;
+  left: 150px;
+  background-color: #f3a93d;
+  width: 350px;
+  height: 350px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 /* ipad pro */
 @media screen and (max-width: 1024px) {
