@@ -7,6 +7,7 @@ var questionNum = 0;
 
 function startShowBtnFunc() {
   console.log('here is start function')
+  document.getElementById("rocketID").src = "/asset/image/alien.png";
   document.getElementById("addSubtractWrapper").style.display = "block";
   document.getElementById("startBtn").style.display = "none";
   questionNum = questionNum + 1;
@@ -17,7 +18,7 @@ function startShowBtnFunc() {
   }
   document.getElementById("questionNumID").innerText =
     "Question " + questionNum;
-  document.getElementById("rocketID").style.visibility = "hidden";
+  document.getElementById("rocketID").style.visibility = "visible";
   document.getElementById("rockStarTextID").style.visibility = "hidden";
 }
 
@@ -146,7 +147,10 @@ function resetFunc() {
   var num2 = 0;
   document.getElementById("answerInputBox").value = " ";
   document.getElementById("questionPtag").innerText = "";
-  document.getElementById("showImgCorrectNotcorrect").src = "";
+  // document.getElementById("rocketID").src = "";
+  document.getElementById("showImgCorrectNotcorrect").src =
+  "";
+
   document.getElementById("nextBtn").style.display = "none";
   // document.getElementById('rocketID').style.visibility = "hidden"
   document.getElementById("easyRadio").checked = false;
@@ -184,7 +188,7 @@ function moveRocket() {
 
 }
 function goodJob() {
-  document.getElementById("rocketID").src = "/asset/image/alien.png";
+  document.getElementById("rocketID").src = "/asset/image/ufo2.png";
   document.getElementById("rockStarTextID").innerText = "Good Job!";
   document.getElementById("rocketID").style.visibility = "visible";
   document.getElementById("rockStarTextID").style.visibility = "visible";

@@ -184,6 +184,7 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+
 /* ipad pro */
 @media screen and (max-width: 1024px) {
   body {
@@ -283,21 +284,17 @@ body {
   }
   /* good job try again */
   #rocketID {
-  width: 80px;
-  }
-  #rockStarTextID {
-    font-size: 20px;
+    margin-top: 120px;
   }
     /* wrap message and image--yellow circle  */
     .wrapImgMessageResult {
-      top: 20px;
+      top: 25px;
       width: 230px;
       height: 230px;
     }
     .mainContainer {
-      top: 64%;
-      height: 550px;
-      padding-top: 0;
+      top: 60%;
+      height: 570px;
     }
 
 }
