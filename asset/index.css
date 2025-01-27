@@ -284,7 +284,11 @@ body {
   }
   /* good job try again */
   #rocketID {
-    margin-top: 120px;
+    margin-top: 10px;
+  }
+  #rockStarTextID {
+    font-size: 20px;
+    margin-top: 0px;
   }
     /* wrap message and image--yellow circle  */
     .wrapImgMessageResult {
